@@ -1,0 +1,21 @@
+Step 1:
+  Create a new EC2 Instance for (Kubernetes Management Host)
+
+Step 2:
+  Install and setup kubectl on Management host:
+    (Detailed Steps in Software Installation Repo)
+
+Step 3:
+  Create an IAM Role and attach it to EC2 instance Management Host
+   Note: create IAM user with programmatic access if your bootstrap system is outside of AWS
+  IAM user should have access to
+  IAM
+  EC2
+  VPC
+  CloudFormation
+  EKS CLuster Role
+  AmazonEKSClusterPolicy AmazonEKSServicePolicy AmazonEKSWorkerNodePolicy AmazonEKS_CNI_Policy
+
+Step 4:
+  Create cluster using cmd :
+    eksctl create cluster --name dev-cluster  --region us-east-1 --node-type t2.medium --nodes-min 1 --nodes-max 2
