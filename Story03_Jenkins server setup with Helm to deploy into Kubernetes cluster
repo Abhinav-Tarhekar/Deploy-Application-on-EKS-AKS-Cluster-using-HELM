@@ -1,0 +1,15 @@
+Step 1:
+  Attached the EKS_Role created for K8 Host to Jenkins server
+
+Step 2:
+  Install & configure Helm on Jenkins server so that it can deploy on Kubernetes cluster. (Detailed Steps in Software Installation Repo)
+
+Step 3:
+  Configure .kube/config file for jenkins in location /var/lib/jenkins/.kube/config and change ownership to Jenkins and change to jenkins user to use the Helm cmd
+
+Step 4: 
+  Deploy Sample Application on EKS Kubernetes cluster with Helm (Testing Purpose)
+    
+
+
+ 
